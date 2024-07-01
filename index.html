@@ -42,6 +42,7 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 1rem;
         }
 
         .logo {
@@ -57,13 +58,12 @@
             background: transparent;
             border: none;
             cursor: pointer;
-            display: flex;
+            display: none;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
             width: 30px;
             height: 20px;
-
         }
 
         #navbar-toggle .bar {
@@ -71,7 +71,6 @@
             width: 25px;
             height: 3px;
             margin: 5px auto;
-            -webkit-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
             background-color: #ffffff !important;
         }
@@ -98,9 +97,23 @@
             color: #4299e1;
         }
 
+        @media only screen and (max-width: 1024px) {
+            .navbar-container {
+                padding: 0 1.5rem;
+            }
+
+            .nav-menu li {
+                margin-right: 0.5rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+        }
+
         @media only screen and (max-width: 768px) {
             .toggle-button {
-                display: block;
+                display: flex;
             }
 
             .nav-menu {
@@ -122,8 +135,11 @@
                 padding: 1rem 0;
                 text-align: center;
             }
-        }
 
+            .nav-menu li {
+                margin-right: 0;
+            }
+        }
 
         section {
             min-height: 100vh;
@@ -155,7 +171,6 @@
             transition: background-color 0.3s ease;
         }
 
-
         .skill-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -178,7 +193,6 @@
             transform: translateY(-5px);
         }
 
-
         .social-icons a {
             color: #4299e1;
             font-size: 1.5rem;
@@ -188,7 +202,6 @@
         .social-icons a:hover {
             color: #3182ce;
         }
-
 
         form input,
         form textarea {
@@ -269,7 +282,83 @@
         .icon-linkedin {
             color: #0077B5;
         }
+
+        @media only screen and (max-width: 600px) {
+            .navbar-container {
+                flex-direction: column;
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .toggle-button {
+                align-self: flex-end;
+            }
+
+            .nav-link {
+                padding: 1rem;
+            }
+
+            .skill-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 0.5rem;
+            }
+
+            .skill-card {
+                padding: 0.5rem;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .navbar-container {
+                padding: 0 0.5rem;
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
+            .nav-link {
+                padding: 0.5rem;
+            }
+
+            .skill-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 0.5rem;
+            }
+
+            .skill-card {
+                padding: 0.5rem;
+            }
+
+            .profile-img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .btn {
+                padding: 0.5rem 1rem;
+            }
+
+            form input,
+            form textarea {
+                padding: 0.5rem;
+            }
+
+            form button[type="submit"] {
+                padding: 0.5rem 1rem;
+            }
+        }
     </style>
+
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -300,7 +389,7 @@
                 alt="Profile Image" class="w-32 h-32 rounded-full mx-auto mb-4" data-aos="fade-up" id="wol"
                 data-aos-delay="300">
             <h1 class="text-4xl font-bold mb-4" data-aos="fade-up" data-aos-delay="500">Arun<span
-                    style="color: #fafad2;">&nbsp;Rawoor</span> aka <span style="color:#f08080;">MERN</span></h1>
+                    style="color: #fafad2;">&nbsp;Rawoor</span> # <span style="color:#00ed64;">M</span><span style="color:#ff9800;">E</span><span style="color:#3776ab;">R</span><span style="color:#4caf50;">N</span></h1>
             <p class="text-xl mb-8" data-aos="fade-up" data-aos-delay="1000">Full Stack Devloper<br>
                 <sub><small>Welcome All to My &nbsp;<span style="color:orange;">Portfolio</span> , click scroll down to
                         explore more About Me</small></sub>
@@ -420,8 +509,7 @@
         <div class="container mx-auto text-center">
             <p class="text-gray-400">&copy; 2024 <a href="https://www.matrical.in/" style="color: #b680ff;">Matrical
                     Techologies</a> All rights reserved.</p>
-            <p class="text-gray-400">Made by <strong style="color: orange;"> <span
-                        href="https://arunrawoor.github.io/react-redux-app/">
+            <p class="text-gray-400">Made by <strong style="color: orange;"> <span>
                         <a href="https://arunrawoor.github.io/react-redux-app/" style="color: orange;">Arun
                             Rawoor</a></strong></p>
         </div>
